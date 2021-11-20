@@ -8,14 +8,17 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] =[
-    {id:1, name: 'Mae West', description: 'You only leave once, but if you do it right, once is enough'},
-    {id:2, name: 'Babe Ruth', description:'Never let the fear of stiking out keep you from playing the game'},
-    {id:3, name: 'Albert Einstein', description:'If you want to live a happy life, live it to a goal not to people or things'},
-    {id:4, name: 'John P Rockefeller', description:'Don/t be afraid to give up the good to go for the great'},
-    {id:5, name: 'Icelandic Proverb', description:'A wise man changes his mind, a fool never will'},
-    {id:6, name: 'Leo Tolstoy', description:'True life is lived when tiny changes occur'},
+    new Quote(1, 'Mae West', 'You only leave once, but if you do it right, once is enough.'),
+    new Quote(2, 'Babe Ruth', 'Never let the fear of stiking out keep you from playing the game.'),
+    new Quote(3, 'Albert Einstein', 'If you want to live a happy life, live it to a goal not to people or things.'),
+    new Quote(4, 'John P Rockefeller' , 'Do not be afraid to give up the good to go for the great.'),
+    new Quote(5,'Icelandic Proverb','A wise man changes his mind, a fool never will.'),
+    new Quote(6, 'Leo Tolstoy','True life is lived when tiny changes occur.'),
     
   ]
+  showDetails(index){
+    this.quotes[index].showDescription=!this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {
