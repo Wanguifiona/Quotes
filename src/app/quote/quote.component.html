@@ -1,13 +1,26 @@
-
-    <h1>My  Quotes</h1>
-    <ul>
+<div class="conatiner">
+  <h1>My QUOTES</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i =index'>
-        <li appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</li>
-        <button (click)='showDetails(i)'>Show More</button>
-        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) ='deleteQuote($event,i)'></app-quote-detail>
+        <div>
+          <h6 id={{i}} appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</h6>
+          <button (click)='showDetails(i)' class="btn btn-outline-primary">Show More</button>
+        </div>
+        <div *ngIf='quote.showDescription'>
+          <app-quote-detail [quote]='quote' (isComplete) ='deleteQuote($event,i)'></app-quote-detail>
+        </div>
       </div>
-    </ul>
-    <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+    </div>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
+    </div>
+  </div>
+  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+</div>
+  
+   
    
     
   
