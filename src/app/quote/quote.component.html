@@ -2,7 +2,7 @@
     <h1>My  Quotes</h1>
     <ul>
       <div *ngFor='let quote of quotes; let i =index'>
-        <li appHighlight>{{ quote.name }}</li>
+        <li appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</li>
         <button (click)='showDetails(i)'>Show More</button>
         <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) ='completeQuote($event,i)'></app-quote-detail>
       </div>
