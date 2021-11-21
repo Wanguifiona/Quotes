@@ -1,0 +1,15 @@
+.form-control{
+    color: white;
+    background: transparent;
+    font-weight: 570;
+  }
+  label{
+    color: white;
+    font-weight: 600;
+  }
+  .container-fluid{
+    background-color: rgba(100, 78, 78, 0.374);
+    border-radius: 15px;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+  }

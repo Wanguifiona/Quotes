@@ -1,0 +1,23 @@
+.button {
+    background-color:rgb(221, 88, 133);
+    padding: 10px;
+    border: solid 1px #f6aeae;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    float: right;
+  }
+.like{
+  background-color: green;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 20px;
+ 
+}
+.dislike{
+  background-color: red;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 20px;
+}

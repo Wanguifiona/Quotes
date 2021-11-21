@@ -2,22 +2,21 @@
   <h1>My QUOTES</h1>
   <hr>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-sm-9">
       <div *ngFor='let quote of quotes; let i =index'>
-        <div>
-          <h6 id={{i}} appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</h6>
-          <button (click)='showDetails(i)' class="btn btn-outline-primary">Show More</button>
-        </div>
+        <div class="card-body">
+          <h6 class="card-title" id={{i}} appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</h6>
+          <button (click)='showDetails(i)' class="show">Show More</button>
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete) ='deleteQuote($event,i)'></app-quote-detail>
         </div>
       </div>
+      </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-sm-3">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
-  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
 </div>
   
    

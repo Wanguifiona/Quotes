@@ -1,5 +1,9 @@
 <p>{{ quote.description}}</p>
-<p>Posted by {{ quote.writer}} </p>
-<p>This quote was last posted {{quote.completeDate|dateCount}} days ago</p>
-<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<p>Posted by {{ quote.writer}}  {{quote.completeDate|dateCount}} days ago</p>
+
+<button (click)=likeButtonClick() class="like">Likes</button>
+{{numberOfLikes}}
+<button (click)=dislikeButtonClick() class="dislike">Dislikes</button>
+{{numberOfDislikes}}
+<button (click)='quoteDelete(true)' class="button">Delete Quote</button>
 
