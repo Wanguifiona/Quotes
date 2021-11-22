@@ -1,8 +1,10 @@
-<div class="conatiner">
-  <h1>My QUOTES</h1>
-  <hr>
+
+<div class="overlay">
+  <div class="conatiner">
+    <h1>My QUOTES</h1>
+    <hr>
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-8">
       <div *ngFor='let quote of quotes; let i =index'>
         <div class="card-body">
           <h6 class="card-title" id={{i}} appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</h6>
@@ -10,13 +12,15 @@
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete) ='deleteQuote($event,i)'></app-quote-detail>
         </div>
-      </div>
+        </div>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
+</div>
+
 </div>
   
    
