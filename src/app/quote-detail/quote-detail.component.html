@@ -1,5 +1,6 @@
 <p>{{ quote.description}}</p>
 <p>Posted by {{ quote.writer}}  {{quote.completeDate|dateCount}} days ago</p>
+<p>{{ quote.completeDate|date|uppercase }}</p>
 
 <button (click)=likeButtonClick() class="like">Likes</button>
 {{numberOfLikes}}

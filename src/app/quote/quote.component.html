@@ -7,7 +7,7 @@
     <div class="col-sm-8">
       <div *ngFor='let quote of quotes; let i =index'>
         <div class="card-body">
-          <h6 class="card-title" id={{i}} appHighlight>{{ quote.name }} last posted on {{ quote.completeDate|date|uppercase }}</h6>
+          <h6 class="card-title" id={{i}} appHighlight>{{ quote.name }} </h6>
           <button (click)='showDetails(i)' class="show">Show More</button>
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete) ='deleteQuote($event,i)'></app-quote-detail>
