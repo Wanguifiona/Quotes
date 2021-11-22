@@ -10,8 +10,7 @@
   .card-body{
     margin-bottom: 30px;
     background-color: rgba(161, 165, 187, 0.808);
-    width: 300px;
-    height: 300px;
+    
   
   }
   .card-text{
@@ -19,12 +18,32 @@
     font-size: 18px;
   }
   .overlay{
-    border-radius: 5px;
-    margin-top:10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-    padding-top: 2px;
-    padding-left: 2px;
+    border-radius: 15px;
+    margin-top:20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
     padding-bottom: 15px;
+    background-color: rgba(238, 238, 238 ,0.96);
+    box-shadow: 3px 4px black;
+    border-radius: 0.5%;
+    
+  }
+  h1{
+    color: black;
+    text-align: center;
+  }
+  .content{
+    background-color: rgba(238, 238, 238 ,0.96);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    margin-bottom: auto;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    box-shadow: 3px 4px black;
+    border-radius: 0.5%;
   }
